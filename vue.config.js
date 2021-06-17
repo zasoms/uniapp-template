@@ -1,3 +1,8 @@
-﻿const config = require('./src/vue.config')
+﻿let config
+try {
+	config = require('./src/vue.config')
+} catch (error) {
+	config = {  }
+}
 
 module.exports = config
