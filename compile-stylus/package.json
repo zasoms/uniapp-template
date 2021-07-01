@@ -1,0 +1,38 @@
+{
+	"name": "stylus",
+	"id": "compile-stylus",
+	"displayName": "stylus编译",
+	"version": "1.0.3",
+	"engines": {
+		"HBuilderX": "^1.0.0"
+	},
+	"external": {
+		"type": "node",
+		"programPath": "${pluginPath}",
+		"executable": "/node_modules/.bin/stylus",
+		"programName": "stylus",
+		"commands": [
+			{
+				"id": "STYL_COMPILE",
+				"name": "编译styl",
+				"command": [
+					"${programPath}",
+					"${file}",
+					"-o",
+					"${fileBasename}.css"
+				],
+				"extensions": "styl",
+				"key": "",
+				"showInParentMenu": false,
+				"onDidSaveExecution": false
+			}
+		]
+	},
+	"dependencies": {
+		"stylus": "^0.54.5"
+	},
+	"extensionDependencies": [
+		"npm"
+	],
+	"description": "编译stylus为css。uni-app编译或对文件右键-外部命令编译时使用"
+}

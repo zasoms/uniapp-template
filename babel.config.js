@@ -1,7 +1,7 @@
 const plugins = []
 
 if (process.env.UNI_OPT_TREESHAKINGNG) {
-  plugins.push(require('@dcloudio/vue-cli-plugin-uni-optimize/packages/babel-plugin-uni-api/index.js'))
+    plugins.push(require('@dcloudio/vue-cli-plugin-uni-optimize/packages/babel-plugin-uni-api/index.js'))
 }
 
 if (
@@ -50,12 +50,14 @@ process.UNI_LIBRARIES.forEach(libraryName => {
   ])
 })
 module.exports = {
+  retainLines: process.env.NODE_ENV !== 'production',
   presets: [
     [
       '@vue/app',
       {
-        modules: 'commonjs',
-        useBuiltIns: process.env.UNI_PLATFORM === 'h5' ? 'usage' : 'entry'
+        modules: 'commonjs',//可支持 module.exports 与 import 混搭使用
+        useBuiltIns: process.env.UNI_PLATFORM === 'h5' ? 'usage' : 'entry',
+        exclude: ['transform-typeof-symbol']
       }
     ]
   ],

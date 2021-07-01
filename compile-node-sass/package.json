@@ -1,0 +1,37 @@
+{
+	"name": "sass",
+	"id": "compile-node-sass",
+	"version": "0.0.4",
+	"displayName": "scss/sass编译",
+	"description": "编译scss/sass为css。uni-app编译或对文件右键-外部命令编译时使用",
+	"engines": {
+		"HBuilderX": "^1.0.0"
+	},
+	"external": {
+		"type": "node",
+		"programPath": "${pluginPath}",
+		"executable": "/node_modules/.bin/node-sass",
+		"programName": "node-sass-china",
+		"commands": [
+			{
+				"id": "SASS_COMPILE",
+				"name": "编译scss/sass",
+				"command": [
+					"${programPath}",
+					"${file}",
+					"${fileBasename}.css"
+				],
+				"extensions": "scss,sass",
+				"key": "",
+				"showInParentMenu": false,
+				"onDidSaveExecution": false
+			}
+		]
+	},
+	"dependencies": {
+		"node-sass-china": "^4.7.2"
+	},
+	"extensionDependencies": [
+		"npm"
+	]
+}
