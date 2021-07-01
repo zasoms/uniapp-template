@@ -10,7 +10,6 @@ if (matchSymbol) {
 const fs = require('fs')
 const path = require('path')
 
-console.log(process.env)
 console.log(process.env.UNI_OUTPUT_DIR)
 
 process.env.UNI_USING_STAT = true

@@ -19,7 +19,7 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "build:mp-weixin": "set NODE_ENV=production&& set UNI_PLATFORM=mp-weixin&& set UNI_OUTPUT_DIR=./dist/build/mp-weixin&& node ./bin/uniapp-cli.js"
+    "build:mp-weixin": "cross-env NODE_ENV=production UNI_PLATFORM=mp-weixin UNI_OUTPUT_DIR=./dist/build/mp-weixin node ./bin/uniapp-cli.js"
   },
   "dependencies": {
     "@babel/plugin-syntax-typescript": "^7.2.0",
@@ -63,7 +63,9 @@
     "vue-template-compiler": "^2.6.11",
     "vuex": "^3.0.1"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "cross-env": "^7.0.3"
+  },
   "browserslist": [
     "Android >= 4",
     "ios >= 8"
