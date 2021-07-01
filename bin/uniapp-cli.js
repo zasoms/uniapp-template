@@ -35,12 +35,11 @@ if (process.env.UNI_SCRIPT) {
 
 const Service = require('@vue/cli-service')
 
-const vueConfigJsPath = path.resolve(process.env.UNI_INPUT_DIR, 'vue.config.js')
+// const vueConfigJsPath = path.resolve(process.env.UNI_INPUT_DIR, 'vue.config.js')
 
-console.log(vueConfigJsPath)
-if (fs.existsSync(vueConfigJsPath)) {
-    process.env.VUE_CLI_SERVICE_CONFIG_PATH = vueConfigJsPath
-}
+// if (fs.existsSync(vueConfigJsPath)) {
+//     process.env.VUE_CLI_SERVICE_CONFIG_PATH = vueConfigJsPath
+// }
 
 // @vue/cli-service/lib/Service.js
 const service = new Service(process.env.VUE_CLI_CONTEXT || process.cwd())
