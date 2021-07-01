@@ -10,6 +10,9 @@ if (matchSymbol) {
 const fs = require('fs')
 const path = require('path')
 
+console.log(process.env)
+console.log(process.env.UNI_OUTPUT_DIR)
+
 process.env.UNI_USING_STAT = true
 process.env.UNI_USING_COMPONENTS = true
 process.env.UNI_USING_NVUE_COMPILER = true
@@ -23,7 +26,7 @@ const {
 } = require('@vue/cli-shared-utils')
 const yargsParser = require('yargs-parser')
 const argv = yargsParser(process.argv.slice(2))
-process.env.UNI_INPUT_DIR = path.resolve(process.env.UNI_INPUT_DIR)
+
 process.env.UNI_OUTPUT_DIR = path.resolve(process.env.UNI_OUTPUT_DIR)
 if (process.env.UNI_SCRIPT) {
     const {

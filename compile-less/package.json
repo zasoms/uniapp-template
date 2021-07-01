@@ -1,0 +1,33 @@
+{
+	"name": "less",
+	"id": "compile-less",
+	"version": "1.0.1-2018080916",
+	"external": {
+		"type": "node",
+		"programPath": "${pluginPath}",
+		"executable": "/node_modules/.bin/lessc",
+		"programName": "less",
+		"commands": [
+			{
+				"id": "LESS_COMPILE",
+				"name": "编译less",
+				"command": [
+					"${programPath}",
+					"${file}",
+					"${fileBasename}.css"
+				],
+				"extensions": "less",
+				"key": "",
+				"showInParentMenu": false,
+				"onDidSaveExecution": false
+			}
+		]
+	},
+	"dependencies": {
+		"less": "^3.0.2"
+	},
+	"extensionDependencies": [
+		"npm"
+	],
+	"description": "less插件用于less文件编译"
+}

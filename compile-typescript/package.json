@@ -1,0 +1,36 @@
+{
+	"name": "typescript",
+	"id": "compile-typescript",
+	"version": "1.0.3",
+	"displayName": "typescript编译",
+	"engines": {
+		"HBuilderX": "^1.0.0"
+	},
+	"external": {
+		"type": "node",
+		"programPath": "${pluginPath}",
+		"executable": "/node_modules/.bin/tsc",
+		"programName": "typescript",
+		"commands": [
+			{
+				"id": "TYPESCRIPT_COMPILE",
+				"name": "编译TypeScript",
+				"command": [
+					"${programPath}",
+					"${file}"
+				],
+				"extensions": "ts",
+				"key": "",
+				"showInParentMenu": false,
+				"onDidSaveExecution": false
+			}
+		]
+	},
+	"dependencies": {
+		"typescript": "^2.8.3"
+	},
+	"extensionDependencies": [
+		"npm"
+	],
+	"description": "编译typescript为js。uni-app编译或对文件右键-外部命令编译时使用"
+}
