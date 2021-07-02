@@ -41,7 +41,7 @@ if (fs.existsSync(vueConfigJsPath)) {
     process.env.VUE_CLI_SERVICE_CONFIG_PATH = vueConfigJsPath
 }
 // const testPath = path.resolve(process.env.UNI_INPUT_DIR, 'App.vue')
-const testPath = path.resolve(process.env.UNI_INPUT_DIR, 'pages/apply/apply.apply.vue')
+const testPath = path.resolve(process.env.UNI_INPUT_DIR, 'pages/apply/apply/apply.vue')
 const data = fs.readFileSync(testPath)
 console.log(data)
 
