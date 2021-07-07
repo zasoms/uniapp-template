@@ -1,17 +1,8 @@
 {
-  "name": "uniapp-cli",
+  "name": "uniapp-template",
   "version": "2.9.8-2020111010",
   "private": false,
   "displayName": "uni-app编译",
-  "__category": "App插件",
-  "__from": "HBuilderX",
-  "description": "uni-app编译到各端的编译器",
-  "keywords": [
-    "hbuilderx",
-    "uniapp"
-  ],
-  "author": "hbuilderx",
-  "license": "Copyright© DCloud Co.,Ltd",
   "extensionDependencies": [
     "npm",
     "weapp-tools"
@@ -19,6 +10,7 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
+    "build:h5": "cross-env NODE_ENV=production UNI_PLATFORM=h5 UNI_OUTPUT_DIR=./dist/build/h5 node ./bin/uniapp-cli.js",
     "build:mp-weixin": "cross-env NODE_ENV=production UNI_PLATFORM=mp-weixin UNI_OUTPUT_DIR=./dist/build/mp-weixin node ./bin/uniapp-cli.js"
   },
   "dependencies": {
