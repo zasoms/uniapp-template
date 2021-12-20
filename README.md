@@ -1,5 +1,7 @@
 # uniapp框架部署模板
 
+## hbuilderx 安装目录下 查找uniapp-cli文件夹中的package.json
+
 ## Project setup
 ```
 npm install
